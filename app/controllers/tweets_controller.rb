@@ -11,10 +11,10 @@ class TweetsController < ApplicationController
 
   get '/tweets/new' do
     if session[:user_id]
-       erb :'/tweets/create_tweet'
-     else
-       redirect '/login'
-      end
+      erb :'/tweets/create_tweet'
+    else
+      redirect '/login'
+    end
   end
 
   post '/tweets' do
