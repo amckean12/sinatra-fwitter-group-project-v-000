@@ -62,7 +62,7 @@ class TweetsController < ApplicationController
         if @tweet.user_id == session[:user_id] then @tweet.delete ; redirect "/tweets" end
           #@tweet.delete
           #redirect "/tweets"
-        #redirect "/tweets"
+        redirect "/tweets"
       end
         redirect "/login"
     end
