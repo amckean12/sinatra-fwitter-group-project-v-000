@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    if params[:content] != ""
+    if logged_in? && params[:content] != ""
       user = User.find_by_id(session[:user_id])
       @tweet = Tweet.create(:content => params[:content], :user_id => user.id)
       redirect "/tweets/#{@tweet.id}"
