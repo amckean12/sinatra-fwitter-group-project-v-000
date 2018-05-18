@@ -46,10 +46,12 @@ class TweetsController < ApplicationController
       end
     else
       redirect to "/login"
-    end 
+    end
   end
 
-  
+  patch '/tweets/<%=@tweet.id%>'
+
+
 
 
 
